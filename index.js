@@ -33,6 +33,10 @@ app.use('/api/auth', authRoutes);
 app.use('/api/chat', chatRoutes); 
 app.use('/api/itineraries', itineraryRoutes);
 
+app.get('/', (req, res) => {
+  res.send({ error: false, message: "Welcome to the Travel Buddy API" });
+});
+
 app.get('/ping', (req, res) => {
   res.send({ error: false, message: "Server is healthy" });
 });
